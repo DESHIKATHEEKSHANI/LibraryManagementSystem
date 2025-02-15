@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="973.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.DashboardFormController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2dce4" height="643.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="219.0" />
+        <TextField fx:id="txtSearchBook" layoutX="241.0" layoutY="22.0" prefHeight="34.0" prefWidth="350.0" promptText="Search your book..." />
+        <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="552.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/SearchIcon.gif" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="279.0" fitWidth="610.0" layoutX="241.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/DashboardCard.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="280.0" layoutY="89.0" prefHeight="62.0" prefWidth="455.0" text="Visit Your Library" textFill="#ff9b9b">
+            <font>
+                <Font name="Elephant" size="48.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="225.0" layoutX="241.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="520.0" />
+        <Label layoutX="247.0" layoutY="369.0" prefHeight="28.0" prefWidth="66.0" text="Popular">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="150.0" fitWidth="110.0" layoutX="247.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/book1.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="110.0" layoutX="380.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/book2.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="110.0" layoutX="508.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/book3.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="110.0" layoutX="641.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/book4.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="254.0" layoutY="553.0" lineSpacing="1.0" prefHeight="28.0" prefWidth="93.0" text="The Beloved" wrapText="true">
+            <font>
+                <Font name="Consolas Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="275.0" layoutY="567.0" lineSpacing="1.0" prefHeight="28.0" prefWidth="39.0" text="Girls" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Consolas Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="382.0" layoutY="553.0" lineSpacing="1.0" prefHeight="28.0" prefWidth="93.0" text="A Game Of" wrapText="true">
+            <font>
+                <Font name="Consolas Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="416.0" layoutY="567.0" lineSpacing="1.0" prefHeight="28.0" prefWidth="52.0" text="Thrones" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Consolas Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="508.0" layoutY="553.0" lineSpacing="1.0" prefHeight="28.0" prefWidth="93.0" text="A Part Of You" wrapText="true">
+            <font>
+                <Font name="Consolas Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="641.0" layoutY="553.0" lineSpacing="1.0" prefHeight="28.0" prefWidth="93.0" text="Breaking" wrapText="true">
+            <font>
+                <Font name="Consolas Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="662.0" layoutY="567.0" lineSpacing="1.0" prefHeight="28.0" prefWidth="52.0" text="The ICE" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Consolas Bold" size="13.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eaf5ff" height="279.0" layoutX="765.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="204.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffcf7" height="70.0" layoutX="771.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="192.0" />
+        <ImageView fitHeight="50.0" fitWidth="58.0" layoutX="900.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/booksicon.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="772.0" layoutY="97.0" prefHeight="18.0" prefWidth="147.0" text="Total Books">
+            <font>
+                <Font name="Century Schoolbook Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtCountBooks" layoutX="808.0" layoutY="124.0" prefHeight="35.0" prefWidth="74.0" text="100">
+            <font>
+                <Font name="Franklin Gothic Medium Cond" size="24.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffcf7" height="70.0" layoutX="771.0" layoutY="171.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="192.0" />
+        <Label layoutX="772.0" layoutY="181.0" prefHeight="18.0" prefWidth="147.0" text="Total Members">
+            <font>
+                <Font name="Century Schoolbook Bold" size="18.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="50.0" fitWidth="58.0" layoutX="915.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/usersicon.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffcf7" height="70.0" layoutX="771.0" layoutY="259.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="192.0" />
+        <Label layoutX="777.0" layoutY="262.0" prefHeight="23.0" prefWidth="170.0" text="Borrowed Books">
+            <font>
+                <Font name="Century Schoolbook Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtCountBorrowedBooks" layoutX="825.0" layoutY="285.0" prefHeight="35.0" prefWidth="93.0" text="100" textFill="#e10d0d">
+            <font>
+                <Font name="Franklin Gothic Medium" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtCountMembers" layoutX="835.0" layoutY="206.0" prefHeight="35.0" prefWidth="93.0" text="100">
+            <font>
+                <Font name="Franklin Gothic Medium" size="24.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7fffc" height="264.0" layoutX="776.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="186.0" />
+        <Label layoutX="777.0" layoutY="369.0" prefHeight="28.0" prefWidth="147.0" text="Top Authors">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="788.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 50%; -fx-border-radius: 50%; -fx-border-color: #fff; -fx-border-width: 2;">
+            <image>
+                <Image url="@../img/author1.jpg" />
+            </image>
+        </ImageView>
+
+        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="882.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 50%; -fx-border-radius: 50%; -fx-border-color: #fff; -fx-border-width: 2;">
+            <image>
+                <Image url="@../img/author2.jpg" />
+            </image>
+        </ImageView>
+
+        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="788.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 50%; -fx-border-radius: 50%; -fx-border-color: #fff; -fx-border-width: 2;">
+            <image>
+                <Image url="@../img/author3.jpg" />
+            </image>
+        </ImageView>
+
+        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="882.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 50%; -fx-border-radius: 50%; -fx-border-color: #fff; -fx-border-width: 2;">
+            <image>
+                <Image url="@../img/author4.jpg" />
+            </image>
+        </ImageView>
+
+        <Label layoutX="788.0" layoutY="478.0" prefHeight="17.0" prefWidth="74.0" text="J.K. Rowling">
+            <font>
+                <Font name="Franklin Gothic Medium Cond" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="878.0" layoutY="478.0" prefHeight="18.0" prefWidth="83.0" text="Agatha Christie">
+            <font>
+                <Font name="Franklin Gothic Medium Cond" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="788.0" layoutY="595.0" prefHeight="17.0" prefWidth="74.0" text="Stephen King">
+            <font>
+                <Font name="Franklin Gothic Medium Cond" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="881.0" layoutY="595.0" prefHeight="17.0" prefWidth="74.0" text="R. L. Stine">
+            <font>
+                <Font name="Franklin Gothic Medium Cond" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtAdminName" layoutX="776.0" layoutY="21.0" prefHeight="28.0" prefWidth="186.0" text="Welcome, Admin">
+            <font>
+                <Font name="Yu Gothic Regular" size="18.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="35.0" fitWidth="52.0" layoutX="917.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/adminIcon.gif" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="162.0" fitWidth="179.0" layoutX="31.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/dfashboardpic3.jpg" />
+            </image>
+        </ImageView>
+      <Label fx:id="txtDate" layoutX="57.0" layoutY="31.0" prefHeight="35.0" prefWidth="106.0" text="2024-12-02">
+         <font>
+            <Font name="Showcard Gothic" size="18.0" />
+         </font>
+      </Label>
+        <JFXButton layoutX="33.0" layoutY="418.0" onAction="#btnLogoutOnAction" prefHeight="35.0" prefWidth="158.0" styleClass="logout-button" stylesheets="@../styles.css" text="LogOut">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+        <JFXButton layoutX="19.0" layoutY="343.0" onAction="#btnReportsOnAction" prefHeight="39.0" prefWidth="186.0" styleClass="button-styles" stylesheets="@../styles.css" text="Reports" />
+        <JFXButton layoutX="19.0" layoutY="294.0" onAction="#btnReturnBookOnAction" prefHeight="39.0" prefWidth="186.0" styleClass="button-styles" stylesheets="@../styles.css" text="Return Book" />
+        <JFXButton layoutX="19.0" layoutY="186.0" onAction="#btnBookManagementOnAction" prefHeight="39.0" prefWidth="186.0" styleClass="button-styles" stylesheets="@../styles.css" text="Book Management" textFill="#0911ff" />
+        <JFXButton layoutX="19.0" layoutY="131.0" onAction="#btnMemberMangementOnAction" prefHeight="39.0" prefWidth="186.0" styleClass="button-styles" stylesheets="@../styles.css" text="Member Management" textFill="#ff0f0f">
+            <font>
+                <Font name="MS PGothic" size="14.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="19.0" layoutY="239.0" onAction="#btnBorrowTransactionOnAction" prefHeight="39.0" prefWidth="186.0" styleClass="button-styles" stylesheets="@../styles.css" text="Borrow Transactions" />
+      <JFXButton layoutX="19.0" layoutY="79.0" onAction="#btnDashboardOnAction" prefHeight="39.0" prefWidth="186.0" styleClass="button-styles" stylesheets="@../styles.css" text="Dashboard" textFill="#ff0f0f">
+         <font>
+            <Font name="MS PGothic" size="14.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="219.0" layoutY="-1.0" prefHeight="643.0" prefWidth="761.0" />
+
+    </children>
+</AnchorPane>

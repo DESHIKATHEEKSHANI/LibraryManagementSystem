@@ -1,0 +1,89 @@
+/* General button styling with pastel colors */
+.button-styles {
+    -fx-background-color: linear-gradient(to right, #A8DADC, #81C784); /* Pastel blue to pastel green gradient */
+    -fx-text-fill: white;
+     -fx-font-weight: bold;/* White text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-family: "Segoe UI", sans-serif; /* Modern font */
+    -fx-padding: 10px 20px; /* Padding around the text */
+    -fx-border-radius: 20px; /* Rounded corners */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0); /* Subtle shadow effect */
+    -fx-cursor: hand; /* Pointer cursor */
+    -fx-alignment: center; /* Center the text */
+    -fx-min-width: 150px; /* Minimum width for consistency */
+    -fx-max-width: 200px; /* Maximum width */
+}
+
+/* Hover effect with a more vibrant pastel color */
+.button-styles:hover {
+    -fx-background-color: linear-gradient(to right, #66B3FF, #4CAF50); /* Pastel blue to pastel green gradient */
+    -fx-text-fill: #FFD700; /* Gold text color on hover */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.6, 0, 0); /* Stronger shadow effect */
+}
+
+/* Adding icons to buttons */
+.button-styles .graphic {
+    -fx-padding: 0 10px 0 0; /* Padding for icon */
+    -fx-alignment: center-left; /* Align the icon to the left */
+}
+
+/* Specific styling for buttons with pastel colors and icons */
+.button-styles-with-icon {
+    -fx-background-color: linear-gradient(to right, #FFB6C1, #A8DADC); /* Pastel pink to pastel blue gradient */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 20px;
+    -fx-alignment: center;
+    -fx-min-width: 150px;
+    -fx-max-width: 200px;
+}
+
+/* Hover effect with pastel tones */
+.button-styles-with-icon:hover {
+    -fx-background-color: linear-gradient(to right, #FF8C94, #66B3FF); /* Pastel pink to pastel blue gradient */
+    -fx-text-fill: #FFD700; /* Gold text color */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.6, 0, 0); /* Stronger shadow effect */
+}
+
+/* Icon styling */
+.icon {
+    -fx-font-size: 18px; /* Icon size */
+    -fx-fill: white; /* White icon */
+}
+
+/* Background for the layout */
+.layout-background {
+    -fx-background-color: #F5F7FA; /* Very light grey with a hint of blue */
+    -fx-padding: 20px; /* Padding around the layout */
+}
+
+/* Specific styling for LogOut button */
+/* Specific styling for LogOut button with pastel colors */
+.logout-button {
+    -fx-background-color: linear-gradient(to right, #FFB6C1, #FFD700); /* Soft pink to pastel yellow gradient */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;/* White text */
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 20px;
+    -fx-alignment: center;
+    -fx-min-width: 150px;
+    -fx-max-width: 200px;
+    -fx-cursor: hand; /* Pointer cursor */
+}
+
+/* Hover effect with a softer pastel color */
+.logout-button:hover {
+    -fx-background-color: linear-gradient(to right, #FF8C00, #FFD700); /* Soft orange to pastel yellow gradient */
+    -fx-text-fill: #FFFFFF; /* White text color on hover */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0); /* Subtle shadow effect */
+}
+
+/* Adjust icon for the LogOut button */
+.logout-button .graphic {
+    -fx-padding: 0 10px 0 0; /* Padding for the icon */
+    -fx-alignment: center-left; /* Align the icon to the left */
+}

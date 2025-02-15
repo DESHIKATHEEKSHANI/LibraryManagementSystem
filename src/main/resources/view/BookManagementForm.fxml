@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="643.0" prefWidth="761.0" style="-fx-background-color: #e4d2ae;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.book.BookFormController">
+   <children>
+      <ImageView fitHeight="643.0" fitWidth="463.0" layoutX="313.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/bookui1.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblBooks" layoutX="300.0" layoutY="170.0" prefHeight="474.0" prefWidth="464.0" style="-fx-background-color: #d7d0e0;">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="56.79998779296875" text="ID" />
+          <TableColumn fx:id="colIsbn" prefWidth="81.5999755859375" text="ISBN" />
+            <TableColumn fx:id="colTitle" prefWidth="102.40005493164062" text="Title" />
+            <TableColumn fx:id="colAuthor" prefWidth="73.5999755859375" text="Author" />
+            <TableColumn fx:id="colGenre" prefWidth="64.0" text="Genre" />
+            <TableColumn fx:id="colAvailability" prefWidth="96.0" text="Availability" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="466.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/bookui2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="335.0" layoutY="42.0" prefHeight="67.0" prefWidth="406.0" text="Books Management">
+         <font>
+            <Font name="Bradley Hand ITC" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="48.0" text="BookId :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="121.0" text="Book ISBN  :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBookID" layoutX="44.0" layoutY="68.0" prefHeight="26.0" prefWidth="211.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtIsbn" layoutX="45.0" layoutY="141.0" prefHeight="26.0" prefWidth="211.0" />
+      <Label layoutX="47.0" layoutY="186.0" text="Book Title  :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTitle" layoutX="45.0" layoutY="206.0" prefHeight="26.0" prefWidth="211.0" />
+      <Label layoutX="45.0" layoutY="248.0" text="Book Author  :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAuthor" layoutX="45.0" layoutY="268.0" prefHeight="26.0" prefWidth="211.0" />
+      <Label layoutX="44.0" layoutY="322.0" text="Book Genre :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comBoxGenre" layoutX="45.0" layoutY="341.0" prefHeight="35.0" prefWidth="211.0" promptText="Select book genre" />
+      <ImageView fitHeight="150.0" fitWidth="179.0" layoutX="2.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/btnbg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="179.0" layoutX="147.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/btnbg.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="165.0" layoutY="465.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="124.0" text="Update">
+         <font>
+            <Font name="Harrington" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="179.0" layoutX="2.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/btnbg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="179.0" layoutX="152.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/btnbg.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="15.0" layoutY="549.0" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="124.0" text="Search">
+         <font>
+            <Font name="Harrington" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="165.0" layoutY="567.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="124.0" text="Delete">
+         <font>
+            <Font name="Harrington" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="15.0" layoutY="467.0" onAction="#btnAddOnAction" prefHeight="30.0" prefWidth="124.0" text="Add Book">
+         <font>
+            <Font name="Harrington" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

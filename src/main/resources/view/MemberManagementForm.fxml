@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="643.0" prefWidth="761.0" style="-fx-background-color: #bae3e5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.member.MemberFormController">
+   <children>
+      <ImageView fitHeight="527.0" fitWidth="746.0" layoutX="7.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/membersui2.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblMembers" layoutX="165.0" layoutY="232.0" prefHeight="256.0" prefWidth="455.0" style="-fx-background-color: #bae3e5; -fx-background-radius: 20;">
+        <columns>
+          <TableColumn fx:id="colMemberID" prefWidth="71.20001220703125" text="MemberID" />
+          <TableColumn fx:id="colName" prefWidth="87.99998474121094" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="87.20001220703125" text="ContactInfo" />
+            <TableColumn fx:id="colDate" prefWidth="120.00006103515625" text="Membership Date" />
+            <TableColumn fx:id="colStatus" prefWidth="88.800048828125" text="Status" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtMemberID" layoutX="140.0" layoutY="53.0" prefHeight="26.0" prefWidth="152.0" />
+      <JFXTextField fx:id="txtName" layoutX="140.0" layoutY="116.0" prefHeight="26.0" prefWidth="152.0" promptText="Enter Name" />
+      <Label layoutX="29.0" layoutY="53.0" prefHeight="26.0" prefWidth="122.0" text="Member ID       :-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="121.0" prefHeight="18.0" prefWidth="100.0" text="Name                :-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtContactNo" layoutX="525.0" layoutY="53.0" prefHeight="26.0" prefWidth="152.0" promptText="Enter ContactNo" />
+      <Label layoutX="393.0" layoutY="60.0" prefHeight="26.0" prefWidth="122.0" text="Contact Info       :-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="393.0" layoutY="117.0" prefHeight="26.0" prefWidth="139.0" text="Membership Date  :-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtDate" layoutX="537.0" layoutY="118.0" prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #fae4a0;" />
+      <JFXButton layoutX="277.0" layoutY="174.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #785e7c;" text="ADD Memeber" textFill="#fff8f8">
+         <font>
+            <Font name="Segoe UI Semibold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="413.0" layoutY="174.0" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #6f9bb3;" text="Update" textFill="#fff8f8">
+         <font>
+            <Font name="Segoe UI Semibold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="525.0" layoutY="174.0" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #f1a1a3;" text="Search" textFill="#fff8f8">
+         <font>
+            <Font name="Segoe UI Semibold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="639.0" layoutY="174.0" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #B95254;" text="Delete" textFill="#fff8f8">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="157.0" layoutY="524.0" prefHeight="52.0" prefWidth="484.0" text="Library Members Management">
+         <font>
+            <Font name="Bradley Hand ITC" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
