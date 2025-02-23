@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="643.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.returnBook.ReturnBookFormController">
+   <children>
+      <ImageView fitHeight="643.0" fitWidth="504.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/returnbookui1.jpg" />
+         </image></ImageView>
+      <TextField fx:id="txtTransactionID" layoutX="33.0" layoutY="35.0" prefHeight="40.0" prefWidth="258.0" promptText="Enter TransactionID" />
+      <JFXButton layoutX="313.0" layoutY="36.0" onAction="#btnSearchOnAction" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #e5d2ac;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cae5ff" height="506.0" layoutX="37.0" layoutY="134.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="392.0" />
+      <Label layoutX="54.0" layoutY="158.0" prefHeight="34.0" prefWidth="162.0" text="Transaction ID    :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="246.0" prefHeight="34.0" prefWidth="162.0" text="Member ID           :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="297.0" prefHeight="34.0" prefWidth="162.0" text="Book ID                 :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="346.0" prefHeight="34.0" prefWidth="162.0" text="Borrow Date          :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="394.0" prefHeight="34.0" prefWidth="162.0" text="Due Date                :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTransactionID" layoutX="216.0" layoutY="158.0" prefHeight="34.0" prefWidth="162.0" textFill="#ff4848">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemberID" layoutX="216.0" layoutY="246.0" prefHeight="34.0" prefWidth="162.0" textFill="#2e0063">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookID" layoutX="209.0" layoutY="297.0" prefHeight="34.0" prefWidth="162.0" textFill="#2e0063">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBorrowDate" layoutX="216.0" layoutY="346.0" prefHeight="34.0" prefWidth="162.0" textFill="#2e0063">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDueDate" layoutX="224.0" layoutY="394.0" prefHeight="34.0" prefWidth="162.0" textFill="#2e0063">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="457.0" prefHeight="34.0" prefWidth="162.0" text="Return Date            :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtReturnDate" layoutX="203.0" layoutY="454.0" prefHeight="34.0" prefWidth="162.0" />
+      <Label fx:id="lblIsOverdurornot" layoutX="61.0" layoutY="524.0" prefHeight="34.0" prefWidth="342.0" textFill="#ff4141">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnReturnBook" layoutX="61.0" layoutY="584.0" onAction="#btnReturnBookOnAction" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: #e2afbe;" text="Return Book">
+         <font>
+            <Font name="Rockwell Condensed" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="471.0" fitWidth="312.0" layoutX="449.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/bookui2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="504.0" layoutY="247.0" prefHeight="26.0" prefWidth="214.0" text="Fine Payment Here................." textFill="#0ad6ec">
+         <font>
+            <Font name="Wingdings 2" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="297.0" prefHeight="34.0" prefWidth="122.0" text="Fine ID  :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="346.0" prefHeight="34.0" prefWidth="122.0" text="OverDue Dates  :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="394.0" prefHeight="34.0" prefWidth="122.0" text="Fine Amount     :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFineID" layoutX="580.0" layoutY="297.0" prefHeight="34.0" prefWidth="146.0" textFill="#33f76b">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOverDueDays" layoutX="618.0" layoutY="346.0" prefHeight="34.0" prefWidth="110.0" text="-------------" textFill="#e762bf">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFineAmount" layoutX="618.0" layoutY="394.0" prefHeight="34.0" prefWidth="110.0" text="------------" textFill="#ff67b6">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="437.0" prefHeight="26.0" prefWidth="226.0" text="Rs.30 For each one overdue day." textFill="#f40000">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="474.0" prefHeight="34.0" prefWidth="122.0" text="Your Payment :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="508.0" prefHeight="34.0" prefWidth="122.0" text="Balance            :-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="509.0" layoutY="549.0" onAction="#btnPaymentDoneOnAction" prefHeight="34.0" prefWidth="201.0" style="-fx-background-color: #c2e6e3;" text="Payment Done">
+         <font>
+            <Font name="NSimSun" size="14.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfe7e3" height="197.0" layoutX="449.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="312.0" />
+      <Label layoutX="459.0" layoutY="-1.0" prefHeight="67.0" prefWidth="292.0" text="Return Books">
+         <font>
+            <Font name="Bradley Hand ITC" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="197.0" fitWidth="304.0" layoutX="447.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/buttonui2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="532.0" layoutY="124.0" text="OverDue Books" textFill="#004b19">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtYourPayment" layoutX="611.0" layoutY="475.0" prefHeight="26.0" prefWidth="123.0" />
+      <JFXTextField fx:id="txtBalance" layoutX="611.0" layoutY="512.0" prefHeight="26.0" prefWidth="123.0" />
+      <AnchorPane fx:id="paneLoadContent" layoutY="-1.0" prefHeight="643.0" prefWidth="761.0">
+         <children>
+            <JFXButton layoutX="490.0" layoutY="79.0" onAction="#btnTrackOverDueBooksOnAction" prefHeight="60.0" prefWidth="202.0" text="Track " textFill="#ff0c0c">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

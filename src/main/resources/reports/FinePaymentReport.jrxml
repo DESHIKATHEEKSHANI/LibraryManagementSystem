@@ -1,0 +1,122 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="FinePaymentReport" language="java" columnCount="1" pageWidth="595" pageHeight="420" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c84fd20-c7ab-4ecd-be7e-af060fd04753">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<query language="SQL"><![CDATA[SELECT fineID, memberID, transactionID, fineAmount, paidStatus
+FROM fines
+WHERE paidStatus = 1;
+]]></query>
+	<field name="fineID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fineID"/>
+		<property name="com.jaspersoft.studio.field.label" value="fineID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fines"/>
+	</field>
+	<field name="memberID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="memberID"/>
+		<property name="com.jaspersoft.studio.field.label" value="memberID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fines"/>
+	</field>
+	<field name="transactionID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="transactionID"/>
+		<property name="com.jaspersoft.studio.field.label" value="transactionID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fines"/>
+	</field>
+	<field name="fineAmount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="fineAmount"/>
+		<property name="com.jaspersoft.studio.field.label" value="fineAmount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fines"/>
+	</field>
+	<field name="paidStatus" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="paidStatus"/>
+		<property name="com.jaspersoft.studio.field.label" value="paidStatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fines"/>
+	</field>
+	<group name="fineID">
+		<expression><![CDATA[$F{fineID}]]></expression>
+	</group>
+	<group name="memberID">
+		<expression><![CDATA[$F{memberID}]]></expression>
+	</group>
+	<group name="transactionID">
+		<expression><![CDATA[$F{transactionID}]]></expression>
+	</group>
+	<group name="fineAmount">
+		<expression><![CDATA[$F{fineAmount}]]></expression>
+	</group>
+	<group name="paidStatus">
+		<expression><![CDATA[$F{paidStatus}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="38" splitType="Stretch">
+		<element kind="textField" uuid="3d0ae15c-3816-4599-96ba-f9af07589c65" x="460" y="0" width="100" height="20" forecolor="#A30A8A" fontName="Arial Black" fontSize="11.0" pattern="MMMMM dd, yyyy" bold="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="textField" uuid="0279adc5-3f99-443a-93b0-4e88dc784482" x="460" y="16" width="100" height="20" forecolor="#F252F2" fontName="Arial Black" fontSize="11.0" pattern="HH:mm" bold="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch">
+		<element kind="staticText" uuid="6f0ff700-91cb-4649-aab2-e9f9edcd2ec0" x="181" y="5" width="193" height="25" forecolor="#18785D" markup="html" fontName="Snap ITC" fontSize="14.0">
+			<text><![CDATA[Fine Payments Report]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="20" splitType="Stretch">
+		<element kind="staticText" uuid="ee1bc939-0f43-444c-a541-de8d54206949" x="20" y="0" width="70" height="20" bold="true">
+			<text><![CDATA[FineID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="730dfd5d-9b55-4e00-8bb3-e6999da00e66"/>
+		</element>
+		<element kind="staticText" uuid="4da9b952-03cf-494c-b9a1-ff79cbc56e13" x="130" y="0" width="80" height="20" bold="true">
+			<text><![CDATA[MemberID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ebfcbbaa-f2a3-4301-a508-82895542c912"/>
+		</element>
+		<element kind="staticText" uuid="e11b1949-cd3d-4ca8-b547-f3d98555cd8d" x="240" y="0" width="80" height="20" bold="true">
+			<text><![CDATA[TransactionID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52631157-292b-47aa-a867-c9ae4e48308a"/>
+		</element>
+		<element kind="staticText" uuid="8bb59e78-2c0d-4512-9588-f2c2fb7c2573" x="374" y="0" width="80" height="20" bold="true">
+			<text><![CDATA[FineAmount]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52631157-292b-47aa-a867-c9ae4e48308a"/>
+		</element>
+		<element kind="staticText" uuid="a7c59152-109b-43b1-897f-ae8e5a5dfd97" x="480" y="0" width="80" height="20" bold="true">
+			<text><![CDATA[PaidStatus]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f588d84f-35bd-4a15-97e2-6993344a8ba5"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<element kind="textField" uuid="e5bc7e22-090f-404d-976a-ddab240011c7" x="20" y="0" width="70" height="20">
+				<expression><![CDATA[$F{fineID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="730dfd5d-9b55-4e00-8bb3-e6999da00e66"/>
+			</element>
+			<element kind="textField" uuid="cb484c59-9cd9-419b-9937-4a16c453e5cc" x="130" y="0" width="80" height="20">
+				<expression><![CDATA[$F{memberID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ebfcbbaa-f2a3-4301-a508-82895542c912"/>
+			</element>
+			<element kind="textField" uuid="116fcc5e-c848-4a1c-a1be-cd0dba28e250" x="240" y="0" width="100" height="20">
+				<expression><![CDATA[$F{transactionID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52631157-292b-47aa-a867-c9ae4e48308a"/>
+			</element>
+			<element kind="textField" uuid="6cb3e7ab-493a-4965-8142-3445514ea892" x="374" y="0" width="100" height="20">
+				<expression><![CDATA[$F{fineAmount}]]></expression>
+			</element>
+			<element kind="textField" uuid="f5d6b11e-ec59-49d0-8a75-e1a5744b6007" x="480" y="0" width="80" height="20" forecolor="#FC0E0A">
+				<expression><![CDATA[$F{paidStatus}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f588d84f-35bd-4a15-97e2-6993344a8ba5"/>
+			</element>
+		</band>
+	</detail>
+	<lastPageFooter height="21">
+		<element kind="staticText" uuid="974bac9b-20fb-436a-8766-5a40faa4ca8b" x="240" y="0" width="63" height="20" forecolor="#FCF408" fontSize="10.0" bold="true">
+			<text><![CDATA[Thank You!]]></text>
+		</element>
+	</lastPageFooter>
+</jasperReport>

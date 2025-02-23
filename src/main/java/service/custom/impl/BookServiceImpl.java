@@ -9,6 +9,8 @@ import service.custom.BookService;
 import util.DaoType;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class BookServiceImpl implements BookService {
@@ -62,16 +64,41 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book searchBook(String bookId) {
         BookEntity entity = dao.search(bookId);
-        return entity != null ? modelMapper.map(entity, Book.class) : null;
+        return (entity != null) ? mapToDto(entity) : null;
     }
 
     @Override
     public List<Book> getAllBooks() {
         return dao.getAll().stream()
-                .map(entity -> modelMapper.map(entity, Book.class))
+                .map(this::mapToDto)
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public Book getBookByTitle(String bookName) {
+        BookEntity entity = dao.getBookByTitle(bookName);
+        return (entity != null) ? mapToDto(entity) : null;
+    }
+
+    @Override
+    public Book getBookById(String bookID) {
+        Optional<BookEntity> bookEntityOptional = dao.findById(bookID);
+        return bookEntityOptional.map(this::mapToDto).orElse(null);
+    }
+
+    @Override
+    public int getCountBooks() {
+        return dao.getCountBooks();
+    }
+
+    @Override
+    public Map<String, Integer> getBookCategoryData() {
+        return dao.getBookCategoryCounts();
+    }
+
+    /**
+     * Converts Book DTO to BookEntity
+     */
     private BookEntity mapToEntity(Book book) {
         BookEntity bookEntity = modelMapper.map(book, BookEntity.class);
         if (bookEntity.getAvailabilityStatus() == null) {
@@ -80,4 +107,10 @@ public class BookServiceImpl implements BookService {
         return bookEntity;
     }
 
+    /**
+     * Converts BookEntity to Book DTO
+     */
+    private Book mapToDto(BookEntity entity) {
+        return modelMapper.map(entity, Book.class);
+    }
 }

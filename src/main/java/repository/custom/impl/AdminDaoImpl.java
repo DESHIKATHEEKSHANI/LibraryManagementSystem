@@ -35,7 +35,7 @@ public class AdminDaoImpl implements AdminDao {
         Session session = HibernateConfig.getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            session.merge(adminEntity);  // merge will persist the entity if it's detached or update if it's already persistent
+            session.merge(adminEntity);
             transaction.commit();
             return true;
         } catch (Exception e) {

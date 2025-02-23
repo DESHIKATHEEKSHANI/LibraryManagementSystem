@@ -105,4 +105,29 @@ public class MemberDaoImpl implements MemberDao {
             session.close();
         }
     }
+
+    @Override
+    public MemberEntity getMemberByName(String name) {
+        Session session = HibernateConfig.getSession();
+        try {
+            return session.createQuery("FROM MemberEntity m WHERE m.name = :name", MemberEntity.class)
+                    .setParameter("name", name)
+                    .uniqueResult();
+        } finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public int getCountMembers() {
+        Session session = HibernateConfig.getSession();
+        try {
+            return ((Long) session.createQuery("SELECT COUNT(m) FROM MemberEntity m")
+                    .uniqueResult()).intValue();
+        } finally {
+            session.close();
+        }
+    }
+
+
 }

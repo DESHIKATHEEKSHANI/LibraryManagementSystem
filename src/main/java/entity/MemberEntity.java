@@ -17,17 +17,17 @@ public class MemberEntity {
 
     @Id
     @Column(unique = true, nullable = false)
-    private String memberID; // Custom memberID (e.g., 'LM001', 'LM002', etc.)
+    private String memberID;
 
     @Column(nullable = false)
-    private String name; // Member's name
+    private String name;
 
     @Column(nullable = false)
-    private String contactInfo; // Contact information for the member
+    private String contactInfo;
 
     @Column(nullable = false)
-    private LocalDate membershipDate; // Date when the membership started
+    private LocalDate membershipDate;
 
     @Column(nullable = false)
-    private String status; // Member's status (e.g., active, inactive, etc.)
+    private String status;
 }

@@ -32,7 +32,7 @@ public class MemberServiceImpl implements MemberService {
         String lastId = dao.getLastMemberId();
 
         if (lastId == null || !lastId.matches("LM\\d{3}")) {
-            return "LM001"; // Default ID
+            return "LM001";
         }
 
         try {
@@ -72,7 +72,17 @@ public class MemberServiceImpl implements MemberService {
                 .collect(Collectors.toList());
     }
 
-    // Helper method to map from Member DTO to MemberEntity
+    @Override
+    public Member getMemberByName(String memberName) {
+        MemberEntity entity = dao.getMemberByName(memberName);  // Assuming the DAO method is implemented
+        return entity != null ? modelMapper.map(entity, Member.class) : null;
+    }
+
+    @Override
+    public int getCountMembers() {
+        return dao.getCountMembers();
+    }
+
     private MemberEntity mapToEntity(Member member) {
         return modelMapper.map(member, MemberEntity.class);
     }

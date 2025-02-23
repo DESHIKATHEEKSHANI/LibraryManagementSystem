@@ -1,0 +1,126 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="BorrowedBooks" language="java" columnCount="1" pageWidth="595" pageHeight="420" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="67631452-b8c4-4dfb-aaa2-f938a448eaba">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<query language="SQL"><![CDATA[SELECT transactionID, memberID, bookID, borrowDate, dueDate, status
+FROM borrowingtransactions
+WHERE status = 'Borrowed'
+]]></query>
+	<field name="transactionID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="transactionID"/>
+		<property name="com.jaspersoft.studio.field.label" value="transactionID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowingtransactions"/>
+	</field>
+	<field name="memberID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="memberID"/>
+		<property name="com.jaspersoft.studio.field.label" value="memberID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowingtransactions"/>
+	</field>
+	<field name="bookID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="bookID"/>
+		<property name="com.jaspersoft.studio.field.label" value="bookID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowingtransactions"/>
+	</field>
+	<field name="borrowDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="borrowDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="borrowDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowingtransactions"/>
+	</field>
+	<field name="dueDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="dueDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="dueDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowingtransactions"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowingtransactions"/>
+	</field>
+	<group name="transactionID">
+		<expression><![CDATA[$F{transactionID}]]></expression>
+	</group>
+	<group name="memberID">
+		<expression><![CDATA[$F{memberID}]]></expression>
+	</group>
+	<group name="bookID">
+		<expression><![CDATA[$F{bookID}]]></expression>
+	</group>
+	<group name="borrowDate">
+		<expression><![CDATA[$F{borrowDate}]]></expression>
+	</group>
+	<group name="dueDate">
+		<expression><![CDATA[$F{dueDate}]]></expression>
+	</group>
+	<group name="status">
+		<expression><![CDATA[$F{status}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="41" splitType="Stretch">
+		<element kind="textField" uuid="7f9aa0e2-4176-4a43-ae29-e32f2a1eb3fc" x="460" y="0" width="100" height="20" forecolor="#A30A8A" fontName="Arial Black" fontSize="11.0" pattern="MMMMM dd, yyyy" bold="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="textField" uuid="ceca9bf0-0616-4b44-acd3-9afc69ab3a57" x="460" y="16" width="100" height="20" forecolor="#F252F2" fontName="Arial Black" fontSize="11.0" pattern="HH:mm" bold="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<pageHeader height="26" splitType="Stretch">
+		<element kind="staticText" uuid="037c0186-af0a-41f8-9b07-1ffbe6415c06" x="161" y="1" width="220" height="25" forecolor="#FC0F66" markup="html" fontName="Snap ITC" fontSize="14.0">
+			<text><![CDATA[List of All Borrowed Books]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="24" splitType="Stretch">
+		<element kind="staticText" uuid="a850b1f6-97ac-42d1-9fe4-236203f37b78" x="10" y="0" width="70" height="20" bold="true">
+			<text><![CDATA[TransactionID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b9307dc-e61b-4402-87b8-5019ff0ef538"/>
+		</element>
+		<element kind="staticText" uuid="edfdc4c8-2ab4-4ebb-879d-099015e9f432" x="113" y="0" width="57" height="20" bold="true">
+			<text><![CDATA[MemberID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f39606a8-2a80-4375-9690-8fb40e16b3d0"/>
+		</element>
+		<element kind="staticText" uuid="c74e45dc-8f99-42a5-9dc9-0cfc99920526" x="200" y="0" width="40" height="20" bold="true">
+			<text><![CDATA[BookID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f39606a8-2a80-4375-9690-8fb40e16b3d0"/>
+		</element>
+		<element kind="staticText" uuid="9ff402d4-5c4d-4dbc-877c-3d01faee9c90" x="280" y="0" width="60" height="20" bold="true">
+			<text><![CDATA[BorrowDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f39606a8-2a80-4375-9690-8fb40e16b3d0"/>
+		</element>
+		<element kind="staticText" uuid="2367face-8f93-4827-9526-7b2b0d3cb422" x="390" y="0" width="90" height="20" bold="true">
+			<text><![CDATA[DueDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f39606a8-2a80-4375-9690-8fb40e16b3d0"/>
+		</element>
+		<element kind="staticText" uuid="142548fe-b715-463a-8189-d21c411ce03b" x="500" y="0" width="50" height="20" bold="true">
+			<text><![CDATA[Status]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f39606a8-2a80-4375-9690-8fb40e16b3d0"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<element kind="textField" uuid="47e25f71-658f-4e52-8cff-c15a0f8f702e" x="15" y="2" width="60" height="20" forecolor="#1A98FF" backcolor="#112796">
+				<expression><![CDATA[$F{transactionID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b9307dc-e61b-4402-87b8-5019ff0ef538"/>
+			</element>
+			<element kind="textField" uuid="baafa522-3f3a-4701-ba1c-1d0ea6c9e15c" x="116" y="2" width="50" height="20">
+				<expression><![CDATA[$F{memberID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f39606a8-2a80-4375-9690-8fb40e16b3d0"/>
+			</element>
+			<element kind="textField" uuid="5f9b73ac-e203-4123-8085-1afae25dc9c1" x="200" y="2" width="40" height="15">
+				<expression><![CDATA[$F{bookID}]]></expression>
+			</element>
+			<element kind="textField" uuid="02961bfc-f52b-4ff3-9c60-b7d1160e5546" x="280" y="0" width="100" height="20" forecolor="#05B041">
+				<expression><![CDATA[$F{borrowDate}]]></expression>
+			</element>
+			<element kind="textField" uuid="0f6d7837-3105-4049-a8e1-c7512afe84be" x="390" y="0" width="90" height="20" forecolor="#E60D09">
+				<expression><![CDATA[$F{dueDate}]]></expression>
+			</element>
+			<element kind="textField" uuid="bea9f9e4-d60c-4504-86e0-67d66fcee900" x="500" y="2" width="50" height="20" forecolor="#000000">
+				<expression><![CDATA[$F{status}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<lastPageFooter height="23">
+		<element kind="staticText" uuid="2dd7fe8d-679d-4b72-8893-19aca8dd841b" x="240" y="0" width="63" height="20" forecolor="#FCF408" fontSize="10.0" bold="true">
+			<text><![CDATA[Thank You!]]></text>
+		</element>
+	</lastPageFooter>
+</jasperReport>

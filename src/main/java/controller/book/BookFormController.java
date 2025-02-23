@@ -58,12 +58,12 @@ public class BookFormController {
             txtBookID.setText(bookID);
 
             Book book = new Book(
-                    bookID,                // Book ID
-                    txtIsbn.getText(),     // ISBN
-                    txtTitle.getText(),    // Title
-                    txtAuthor.getText(),   // Author
-                    comBoxGenre.getValue(),// Category (from combobox)
-                    "Available"            // Availability status (default to Available)
+                    bookID,
+                    txtIsbn.getText(),
+                    txtTitle.getText(),
+                    txtAuthor.getText(),
+                    comBoxGenre.getValue(),
+                    "Available"
             );
 
 
@@ -109,7 +109,7 @@ public class BookFormController {
                     txtTitle.getText(),
                     txtAuthor.getText(),
                     comBoxGenre.getValue(),
-                    "Available"// Default to Available
+                    "Available"
             );
 
             boolean result = bookService.updateBook(book);
@@ -171,7 +171,6 @@ public class BookFormController {
 
     @FXML
     public void initialize() {
-        // Define columns without generics
         colID.setCellValueFactory(new PropertyValueFactory<>("bookID"));
         colIsbn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
@@ -187,7 +186,6 @@ public class BookFormController {
             }
         });
 
-        // Setup for the book form
         txtBookID.setText(generateNewBookId());
         List<String> categories = categoryService.getAllCategories();
         comBoxGenre.setItems(FXCollections.observableArrayList(categories));

@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface MemberDao extends CrudDao<MemberEntity> {
     String getLastMemberId();
+    MemberEntity getMemberByName(String name);
 
+    int getCountMembers();
 }

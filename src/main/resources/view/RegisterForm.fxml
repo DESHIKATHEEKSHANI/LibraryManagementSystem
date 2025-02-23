@@ -15,41 +15,33 @@
 
 <AnchorPane prefHeight="476.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admin.RegisterFormController">
     <children>
-        <!-- Background Image -->
         <ImageView fitHeight="400.0" fitWidth="378.0" layoutX="14.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../img/Register.jpg" />
             </image>
         </ImageView>
 
-        <!-- Overlay Text on Image -->
         <Label layoutX="64.0" layoutY="27.0" prefHeight="39.0" prefWidth="314.0" style="-fx-font-weight: bold;" text="Create Your Account" textFill="#ab149e">
             <font>
                 <Font name="Comic Sans MS" size="28.0" />
             </font>
         </Label>
 
-        <!-- Register Form Container -->
         <VBox alignment="CENTER" layoutX="398.0" layoutY="20.0" prefHeight="438.0" prefWidth="290.0" spacing="15.0" style="-fx-background-color: #FFEBEE; -fx-padding: 20; -fx-background-radius: 15;">
             <children>
 
-                <!-- Title Label -->
                 <Label text="Register Your Account" textFill="DARKSLATEBLUE">
                     <font>
                         <Font name="Comic Sans MS" size="22" />
                     </font>
                 </Label>
 
-                <!-- Full Name Field -->
                 <TextField fx:id="txtName" promptText="User Name" style="-fx-background-color: #FFECF0; -fx-background-radius: 10; -fx-font-size: 16;" />
 
-                <!-- Email Field -->
                 <TextField fx:id="txtEmail" promptText="Email" style="-fx-background-color: #FFECF0; -fx-background-radius: 10; -fx-font-size: 16;" />
 
-                <!-- Password Field -->
                 <PasswordField fx:id="txtPassword" promptText="Password" style="-fx-background-color: #FFECF0; -fx-background-radius: 10; -fx-font-size: 16;" />
 
-                <!-- Remember Me & Terms and Conditions -->
                 <HBox alignment="CENTER_LEFT" spacing="10.0">
                     <children>
                         <CheckBox fx:id="checkAgree" onAction="#checkAgreeOnAction" prefHeight="26.0" prefWidth="266.0" style="-fx-font-size: 14;" text="I agree to the Terms and Conditions" textFill="DARKSLATEGRAY">
@@ -59,10 +51,8 @@
                     </children>
                 </HBox>
 
-                <!-- Register Button -->
                 <Button onAction="#btnRegisterOnAction" style="-fx-background-color: #AEA1FF; -fx-font-size: 16; -fx-background-radius: 12; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px 20px;" text="Register" />
 
-                <!-- Already have an account? Login -->
                 <HBox alignment="CENTER" spacing="5.0">
                     <children>
                         <Label style="-fx-font-size: 14;" text="Already have an account?" textFill="DARKSLATEGRAY" />

@@ -87,3 +87,38 @@
     -fx-padding: 0 10px 0 0; /* Padding for the icon */
     -fx-alignment: center-left; /* Align the icon to the left */
 }
+/* styles.css */
+.table-view {
+    -fx-background-color: transparent; /* Make the table background transparent */
+}
+
+.table-row-cell {
+    -fx-background-color: transparent; /* Make the row background transparent */
+    -fx-cell-size: 35px; /* Adjust row height */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* Slight opacity for odd rows */
+}
+
+.table-row-cell:even {
+    -fx-background-color: rgba(255, 255, 255, 0.05); /* Slight opacity for even rows */
+}
+
+.table-cell {
+    -fx-text-fill: black; /* Ensure text is clearly visible */
+    -fx-font-size: 14px; /* Adjust font size */
+    -fx-font-weight: bold; /* Make text bold */
+}
+
+.table-column {
+    -fx-alignment: CENTER; /* Center align text in columns */
+}
+
+.default-color0.chart-bar { -fx-bar-fill: #f7c1bb; } /* Pastel pink for Borrowed */
+.default-color1.chart-bar { -fx-bar-fill: #f0e0a5; } /* Pastel yellow for Returned */
+.default-color2.chart-bar { -fx-bar-fill: #b6e0f3; } /* Pastel blue for Overdue */
+
+.chart-bar {
+    -fx-bar-width: 60; /* Increase this value to make the bars wider */
+}

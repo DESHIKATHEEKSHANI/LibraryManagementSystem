@@ -14,7 +14,7 @@ public class AdminServiceImpl implements AdminService {
     private final AdminDao dao = DaoFactory.getInstance().getDaoType(DaoType.ADMIN);
     private final ModelMapper modelMapper = new ModelMapper();
 
-    private final String encryptionKey = "1234"; // You can store this key securely somewhere
+    private final String encryptionKey = "1234";
     private final StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
 
     public AdminServiceImpl() {
@@ -32,7 +32,6 @@ public class AdminServiceImpl implements AdminService {
             return false;
         }
 
-        // Encrypt the password before saving it
         String encryptedPassword = encryptPassword(password);
         adminEntity.setPassword(encryptedPassword);
 
@@ -43,7 +42,6 @@ public class AdminServiceImpl implements AdminService {
     public boolean authenticate(String email, String password) {
         AdminEntity admin = dao.findByEmail(email);
         if (admin != null) {
-            // Decrypt the stored password and compare with the input password
             String decryptedPassword = decryptPassword(admin.getPassword());
             return decryptedPassword.equals(password);
         }
@@ -51,11 +49,11 @@ public class AdminServiceImpl implements AdminService {
     }
 
     private String encryptPassword(String password) {
-        return encryptor.encrypt(password);  // Encrypt the password
+        return encryptor.encrypt(password);
     }
 
     private String decryptPassword(String encryptedPassword) {
-        return encryptor.decrypt(encryptedPassword);  // Decrypt the password
+        return encryptor.decrypt(encryptedPassword);
     }
 
     @Override
@@ -76,5 +74,15 @@ public class AdminServiceImpl implements AdminService {
         return false;
     }
 
+    @Override
+    public String getAdminName(String email) {
+        AdminEntity adminEntity = dao.findByEmail(email);
+
+        if (adminEntity != null) {
+            return adminEntity.getUserName();
+        }
+
+        return "";
+    }
 
 }

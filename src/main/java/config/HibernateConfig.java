@@ -1,9 +1,6 @@
 package config;
 
-import entity.AdminEntity;
-import entity.BookEntity;
-import entity.CategoryEntity;
-import entity.MemberEntity;
+import entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -25,6 +22,8 @@ public class HibernateConfig {
                 .addAnnotatedClass(MemberEntity.class)
                 .addAnnotatedClass(CategoryEntity.class)
                 .addAnnotatedClass(BookEntity.class)
+                .addAnnotatedClass(BorrowingTransactionEntity.class)
+                .addAnnotatedClass(FineEntity.class)
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();

@@ -1,9 +1,12 @@
 package controller.admin;
 
+import controller.dashboard.DashboardFormController;
+import controller.dashboard.HomeFormController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
@@ -37,7 +40,6 @@ public class LoginFormController {
 
     @FXML
     public void initialize() {
-        // Load saved credentials if Remember Me was checked
         String savedEmail = preferences.get("email", "");
         String savedPassword = preferences.get("password", "");
 
@@ -61,7 +63,6 @@ public class LoginFormController {
             if (isAuthenticated) {
                 showAlert("Success", "Login successful!");
 
-                // Save credentials if Remember Me is checked
                 if (checkRememberMe.isSelected()) {
                     preferences.put("email", email);
                     preferences.put("password", password);
@@ -70,26 +71,56 @@ public class LoginFormController {
                     preferences.remove("password");
                 }
 
-                // Proceed to the next screen
-                navigateToDashboard(event);
+                String adminName = adminService.getAdminName(email);
+
+                navigateToDashboard(event, adminName);
             } else {
                 showAlert("Error", "Invalid credentials, please try again.");
             }
         }
     }
 
+    private void navigateToDashboard(ActionEvent event, String adminName) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/DashboardForm.fxml"));
+            Parent root = loader.load();
+
+            DashboardFormController dashboardController = loader.getController();
+
+            if (dashboardController != null) {
+                HomeFormController homeFormController = dashboardController.getHomeFormController();
+
+                if (homeFormController != null) {
+                    homeFormController.setAdminName(adminName);
+                } else {
+                    showAlert("Error", "Failed to load the HomeFormController.");
+                }
+
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
+            } else {
+                showAlert("Error", "Failed to load the Dashboard form.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error", "Failed to load the dashboard.");
+        }
+    }
+
+
+
+
+
     @FXML
     void checkRememberMeOnAction(ActionEvent event) {
-        // This method will be called when the Remember Me checkbox is toggled
         String email = txtEmail.getText();
         String password = txtPassword.getText();
 
         if (checkRememberMe.isSelected()) {
-            // Save the email and password if the checkbox is checked
             preferences.put("email", email);
             preferences.put("password", password);
         } else {
-            // Remove the saved credentials if the checkbox is unchecked
             preferences.remove("email");
             preferences.remove("password");
         }
@@ -113,12 +144,11 @@ public class LoginFormController {
 
         boolean emailExists = adminService.checkEmailExists(email);
         if (emailExists) {
-            String verificationCode = generateVerificationCode(); // Generate a verification code
+            String verificationCode = generateVerificationCode();
             boolean emailSent = EmailService.sendVerificationCode(email, verificationCode);
 
             if (emailSent) {
                 showAlert("Success", "A verification code has been sent to your email.");
-                // Handle code verification and password reset in a new dialog or scene
                 showPasswordResetDialog(email, verificationCode);
             } else {
                 showAlert("Error", "Failed to send verification email. Please try again later.");
@@ -135,7 +165,7 @@ public class LoginFormController {
             stage.setScene(new Scene(loader.load()));
 
             PasswordResetDialogController controller = loader.getController();
-            controller.initData(email, verificationCode);  // Pass email and code to the controller
+            controller.initData(email, verificationCode);
 
             stage.setTitle("Reset Password");
             stage.showAndWait();

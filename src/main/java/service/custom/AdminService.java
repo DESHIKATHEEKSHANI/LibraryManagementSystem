@@ -8,4 +8,5 @@ public interface AdminService extends SuperService {
     boolean checkEmailExists(String email);
     boolean resetPassword(String email, String newPassword);
 
+    String getAdminName(String email);
 }

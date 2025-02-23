@@ -24,7 +24,7 @@ public class PasswordResetDialogController {
     private AdminServiceImpl adminService;
 
     public PasswordResetDialogController() {
-        adminService = new AdminServiceImpl(); // Service to interact with the database
+        adminService = new AdminServiceImpl();
     }
 
     public void initData(String email, String verificationCode) {
@@ -53,7 +53,6 @@ public class PasswordResetDialogController {
             return;
         }
 
-        // Reset password using the service
         boolean isPasswordReset = adminService.resetPassword(email, newPassword);
 
         if (isPasswordReset) {
@@ -66,7 +65,7 @@ public class PasswordResetDialogController {
 
     private void closeStage() {
         Stage stage = (Stage) txtVerificationCode.getScene().getWindow();
-        stage.close();  // Close the password reset dialog
+        stage.close();
     }
 
     private void showAlert(String title, String message) {

@@ -1,9 +1,7 @@
 package repository;
 
-import repository.custom.impl.AdminDaoImpl;
-import repository.custom.impl.BookDaoImpl;
-import repository.custom.impl.CategoryDaoImpl;
-import repository.custom.impl.MemberDaoImpl;
+import repository.custom.impl.*;
+import service.custom.impl.BorrowingTransactionServiceImpl;
 import util.DaoType;
 
 public class DaoFactory {
@@ -19,6 +17,8 @@ public class DaoFactory {
             case MEMBER:return (T) new MemberDaoImpl();
             case BOOK:return (T) new BookDaoImpl();
             case CATEGORY:return (T) new CategoryDaoImpl();
+            case BORROWING_TRANSACTION:return (T) new BorrowingTransactionDaoImpl();
+            case FINE: return(T) new FineDaoImpl();
         }
         return null;
     }

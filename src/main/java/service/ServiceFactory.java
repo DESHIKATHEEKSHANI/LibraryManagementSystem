@@ -1,9 +1,6 @@
 package service;
 
-import service.custom.impl.AdminServiceImpl;
-import service.custom.impl.BookServiceImpl;
-import service.custom.impl.CategoryServiceImpl;
-import service.custom.impl.MemberServiceImpl;
+import service.custom.impl.*;
 import util.ServiceType;
 
 public class ServiceFactory {
@@ -22,6 +19,8 @@ public class ServiceFactory {
             case MEMBER:return (T) new MemberServiceImpl();
             case BOOK:return (T) new BookServiceImpl();
             case CATEGORY:return (T) new CategoryServiceImpl();
+            case BORROWING_TRANSACTION: return(T) new BorrowingTransactionServiceImpl();
+            case FINE: return(T) new FineServiceImpl();
         }
         return null;
     }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="662.0" prefWidth="761.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.transaction.BorrowingHistoryFormController">
+   <children>
+      <ImageView fitHeight="578.0" fitWidth="790.0" layoutX="-2.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Tablesui.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cee5fa" height="125.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="786.0" />
+      <Label layoutX="8.0" layoutY="20.0" prefHeight="67.0" prefWidth="521.0" text="Borrowing Books History">
+         <font>
+            <Font name="Bradley Hand ITC" size="48.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblBorrowingHistory" layoutX="1.0" layoutY="107.0" prefHeight="553.0" prefWidth="772.0" style="-fx-background-image: \@ ..\img\Tablesui.jpg;">
+        <columns>
+          <TableColumn fx:id="colTransactionID" prefWidth="105.60000610351562" text="TransactionID" />
+          <TableColumn fx:id="colMemberID" prefWidth="92.79998779296875" text="MemberID" />
+            <TableColumn fx:id="colBookID" prefWidth="88.79998779296875" text="BookID" />
+            <TableColumn fx:id="colBorrowDate" prefWidth="105.60003662109375" text="BorrowDate" />
+            <TableColumn fx:id="colDueDate" prefWidth="95.199951171875" text="DueDate" />
+            <TableColumn fx:id="colReturnDate" prefWidth="82.4000244140625" text="ReturnDate" />
+            <TableColumn fx:id="colFines" prefWidth="198.4000244140625" text="Fines" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1a69a" height="17.0" layoutX="566.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="60.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bae5bb" height="17.0" layoutX="566.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="60.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#de4741" height="17.0" layoutX="566.0" layoutY="71.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="60.0" />
+      <Label layoutX="633.0" layoutY="21.0" prefHeight="18.0" prefWidth="111.0" text="Not Returned Yet" />
+      <Label layoutX="633.0" layoutY="45.0" prefHeight="18.0" prefWidth="111.0" text="Returned" />
+      <Label layoutX="633.0" layoutY="70.0" prefHeight="18.0" prefWidth="111.0" text="OverDue" />
+   </children>
+</AnchorPane>

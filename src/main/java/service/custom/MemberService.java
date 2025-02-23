@@ -12,4 +12,7 @@ public interface MemberService extends SuperService {
     Member searchMember(String memberId);
     List<Member> getAllMembers();
     String generateNewMemberId();
+    Member getMemberByName(String memberName);
+
+    int getCountMembers();
 }
